@@ -38,7 +38,7 @@ gcc -I ./valgrind/valgrind-3.20.0/taintgrind/ -I ./valgrind/valgrind-3.20.0/incl
 python Main.py $compiled_c_object 0 0 0 0
 python slicer.py
 ```
-To compile the sliced code into bitstreams, execute the 'run.sh' script in the folder 'code/trusted_edge_server/benchmark'.
+To compile the sliced code into bitstreams, execute the `run.sh` script in the folder 'code/trusted_edge_server/benchmark'.
 
 ## FPGAs and the FPGA manager
 To run the compiled workload, execute the files separately:
