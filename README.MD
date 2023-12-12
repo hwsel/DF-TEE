@@ -1,5 +1,5 @@
 # DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems
-THis is apreliminary version of the source code for DF-TEE based on our AsianHost [paper](./docs/AsianHost23_DF-TEE.pdf): "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems". 
+This is apreliminary version of the source code for DF-TEE based on our AsianHost [paper](./docs/AsianHost23_DF-TEE.pdf): "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems". 
 
 # System Overview
 The system is divided into five components:
@@ -30,7 +30,7 @@ make
 
 ## Trusted edge server
 - Install [TaintGrind(v.3.12.0)](https://github.com/wmkhoo/taintgrind) 
-- Download the code for [TZSlicer](https://github.com/hwsel/tzslicer) and add it to the folder 'code/trusted_edge_server'
+- Download the code for [TZSlicer](https://github.com/hwsel/tzslicer) and add it to the folder `code/trusted_edge_server`
 - Execute:
 ```
 gcc -I ./valgrind/valgrind-3.20.0/taintgrind/ -I ./valgrind/valgrind-3.20.0/include/ -g $c_source_file -o $compiled_c_object -lm
@@ -38,7 +38,7 @@ gcc -I ./valgrind/valgrind-3.20.0/taintgrind/ -I ./valgrind/valgrind-3.20.0/incl
 python Main.py $compiled_c_object 0 0 0 0
 python slicer.py
 ```
-To compile the sliced code into bitstreams, execute the `run.sh` script in the folder 'code/trusted_edge_server/benchmark'.
+To compile the sliced code into bitstreams, execute the `run.sh` script in the folder `code/trusted_edge_server/benchmark`.
 
 ## FPGAs and the FPGA manager
 To run the compiled workload, execute the files separately:
