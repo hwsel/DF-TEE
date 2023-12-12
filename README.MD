@@ -2,6 +2,7 @@
 This is apreliminary version of the source code for DF-TEE based on our AsianHost [paper](./docs/AsianHost23_DF-TEE.pdf): "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems". 
 
 # System Overview
+![system_overview](./docs/overview_disag.png)
 The system is divided into five components:
 - **Client** supports SGX and wishes to offload computation to FPGA.
 - **Trusted edge server** slices the client source code into untrusted and trusted functions, and compiles the code into FPGA bitstreams.
