@@ -1,5 +1,7 @@
 # DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems
-This is apreliminary version of the source code for DF-TEE based on our AsianHost [paper](./docs/AsianHost23_DF-TEE.pdf): "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems". 
+This is a preliminary version of the source code for DF-TEE based on our AsianHost paper. To find more details, please read our [paper](./docs/AsianHost23_DF-TEE.pdf): 
+
+Ke Xia and Sheng Wei, "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems", Asian Hardware Oriented Security and Trust Symposium (AsianHOST), 2023
 
 # System Overview
 ![system_overview](./docs/overview_disag.png)
@@ -11,7 +13,7 @@ The system is divided into five components:
 
 # Execution Instructions
 ## Client
-- Install SGX and setup the SGX environment
+- Install [SGX](https://github.com/intel/linux-sgx) and setup the SGX environment
 - Modify `settings` with your own information
 - Execute:
 ```
@@ -34,8 +36,8 @@ make
 - Download the code for [TZSlicer](https://github.com/hwsel/tzslicer) and add it to the folder `code/trusted_edge_server`
 - Execute:
 ```
-gcc -I ./valgrind/valgrind-3.20.0/taintgrind/ -I ./valgrind/valgrind-3.20.0/include/ -g $c_source_file -o $compiled_c_object -lm
-./valgrind/valgrind-3.20.0/build/bin/valgrind --tool=taintgrind $compiled_c_object 2>$log_file
+gcc -I ./valgrind/valgrind-3.12.0/taintgrind/ -I ./valgrind/valgrind-3.12.0/include/ -g $c_source_file -o $compiled_c_object -lm
+./valgrind/valgrind-3.12.0/build/bin/valgrind --tool=taintgrind $compiled_c_object 2>$log_file
 python Main.py $compiled_c_object 0 0 0 0
 python slicer.py
 ```
