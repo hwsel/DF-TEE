@@ -9,7 +9,7 @@ The system is divided into five components:
 - **FPGA manager** communicates with the FPGAs to execute the computation.
 - **FPGAs** are the hardwares to run the compiled workload.
 
-# Execute Instructions
+# Execution Instructions
 ## Client
 - Install SGX and setup the SGX environment
 - Modify `settings` with your own information
