@@ -1,5 +1,5 @@
 # DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems
-THis is apreliminary version of the source code for DF-TEE based on our AsianHost paper: "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems". 
+THis is apreliminary version of the source code for DF-TEE based on our AsianHost [paper](./docs/AsianHost23_DF-TEE.pdf): "DF-TEE: Trusted Execution Environment for Disaggregated Multi-FPGA Cloud Systems". 
 
 # System Overview
 The system is divided into five components:
