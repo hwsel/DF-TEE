@@ -13,23 +13,8 @@ The system is divided into five components:
 
 # Execution Instructions
 ## Client
-- Install [SGX](https://github.com/intel/linux-sgx) and setup the SGX environment
-- Modify `settings` with your own information
-- Execute:
-```
-./bootstrap
-./configure
-make
-./run-client
-```
-## Secure monitor
-- Execute:
-```
-./bootstrap
-./configure
-make
-./run-server
-```
+We leverage the SGX remote attestation example to attest with the secure monitor. Please see: [SGX-ra-sample](https://github.com/intel/sgx-ra-sample).
+The folder `benchmark` includes the benchmark code. To run the code, please put the selected .c file into the trusted edge server.
 
 ## Trusted edge server
 - Install [TaintGrind(v.3.12.0)](https://github.com/wmkhoo/taintgrind) 
@@ -41,10 +26,10 @@ gcc -I ./valgrind/valgrind-3.12.0/taintgrind/ -I ./valgrind/valgrind-3.12.0/incl
 python Main.py $compiled_c_object 0 0 0 0
 python slicer.py
 ```
-To compile the sliced code into bitstreams, execute the `run.sh` script in the folder `code/trusted_edge_server/benchmark`.
+The compiled code is tested with Xilinx Vitis 2022.1.
 
 ## FPGAs and the FPGA manager
-To run the compiled workload, execute the files separately:
+The provided code is based for the benchmark gamma_filter. To run the compiled workload, execute the files separately:
 ```
 FPGA_manager/FPGA_manager.ipynb
 FPGA/FPGA_1.ipynb
