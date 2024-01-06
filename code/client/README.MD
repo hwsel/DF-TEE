@@ -1,0 +1,1 @@
+This folder provies the image processing benchmarks shwon in the paper. We further leverage the [Rosetta benchmark](https://github.com/cornell-zhang/rosetta) and LeNet5 and AlexNet. 
